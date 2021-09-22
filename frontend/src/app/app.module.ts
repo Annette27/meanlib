@@ -23,6 +23,8 @@ import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
 import { AllBookComponent } from './all-book/all-book.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BooklistService } from './booklist.service';
+import { AuthorlistService } from './authorlist.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [ListService,AuthService,
+  providers: [ListService,AuthService,BooklistService,AuthorlistService,
   {provide:HTTP_INTERCEPTORS,
   useClass:TokenInterceptorService,
   multi:true}],
